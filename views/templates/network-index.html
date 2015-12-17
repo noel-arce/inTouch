@@ -1,6 +1,6 @@
 <div class="col-sm-3">
-  <h3>Networks</h3>
-  <form class="input-group" ng-submit="createNetwork(network)">
+  <h3 class="animated fadeIn">Networks</h3>
+  <form class="input-group animated fadeIn" ng-submit="createNetwork(network)">
     <input type="text" class="form-control" placeholder="Name" ng-model="network.title" />
     <span class="input-group-btn">
       <button id="addNetwork" type="submit" class="btn btn-default"><i class="ion-plus-circled"></i></button>
@@ -9,7 +9,7 @@
   <br>
 
   <ul id="network-list" class="nav nav-tabs nav-stacked">
-    <li ng-repeat="network in user.networks">
+    <li class="animated flipInX" ng-repeat="network in user.networks">
       <a class="network-tab" ng-class="(network == currentNetwork) ? 'active' : ''" ng-click="setCurrentNetwork(network)">{{ network.title }}<i ng-click="deleteNetwork(network)" class="ion-android-remove-circle pull-right"></i></a>
     </li>
   </ul>
@@ -18,22 +18,22 @@
 <div class="col-sm-9">
   <!-- New Contact Form -->
   <div>
-    <button id="newContact" type="button" class="btn btn-link center-block" ng-show="currentNetwork" ng-click="newContact = !newContact">{{newContactText}}</button>
-    <form id="contactForm" ng-show="newContact" ng-submit="createContact(contact)">
+    <button id="newContact" type="button" class="btn btn-link center-block animated fadeIn" ng-show="currentNetwork" ng-click="newContact = !newContact">{{newContactText}}</button>
+    <form id="contactForm" class="animated fadeIn" ng-show="newContact" ng-submit="createContact(contact)">
       <input class="form-control" placeholder="name" ng-model="contact.name" autofocus/>
       <input class="form-control" type="text" placeholder="minutes" ng-model="contact.days"/>
       <button id="addContact" type="submit" class='form-control'>Add</button>
     </form>
   </div>
-  <hr>
+  <hr class="animated fadeIn">
   <!-- TEXT WHEN BLANK -->
   <div class="text-center" ng-show="!(user.networks).length">
     <h2>You currently have no networks.</h2>
   </div>
 
-  <h3>{{ currentNetwork.title }}</h3>
+  <h3 class="animated fadeIn">{{ currentNetwork.title }}</h3>
   <ul class='list-group'>
-    <li id="contact-list" class="list-group-item" ng-class="{time_out: !contact.time_left, time_left: contact.time_left}" ng-repeat="contact in currentNetwork.contacts | orderBy : 'deadline'"> 
+    <li id="contact-list" class="list-group-item animated flipInX" ng-class="{time_out: !contact.time_left, time_left: contact.time_left}" ng-repeat="contact in currentNetwork.contacts | orderBy : 'deadline'"> 
       <span ng-hide="editing"><strong>{{contact.name}}</strong> | </span>
       <timer end-time="contact.deadline" ng-hide="editing" finish-callback="turnRed(contact)">{{minutes}}:{{seconds}}</timer>  <!-- {{days}}:{{hours}}: -->
       <a class='pull-right' ng-hide="editing" ng-click="deleteContact(contact)">
