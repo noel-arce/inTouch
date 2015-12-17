@@ -73,8 +73,11 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 // connect to database
-var dbName = 'seed-mean-html';
-mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/' + dbName);    
+mongoose.connect(
+  process.env.MONGOLAB_URI ||
+  process.env.MONGOHQ_URL ||
+  'mongodb://localhost/bonzi' // plug in the db name you've been using
+);
 
 // serve public folder as static assets on the root route
 var publicPath = path.join(__dirname, 'public');
