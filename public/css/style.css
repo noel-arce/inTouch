@@ -7,8 +7,31 @@
 }
 */
 
-.jumbotron {
-  padding:100px 0 130px 0;
+body {
+	background: url("/img/4028-bonsai-1920x1080-digital-art-wallpaper.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#splashContainer {
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+#tagline {
+	margin-left: 85px;
+}
+
+h1 {
+	color: #ffffff;
+	font-size: 150px;
+}
+
+p {
+	color: #ffffff;
+	font-size: 50px;
 }
 
 .navbar-right {
@@ -20,7 +43,7 @@
 }​
 
 .navbar {
-  margin:0;
+  margin: 0px;
 }
 
 .dropdown-form {
@@ -30,6 +53,12 @@
 
 nav {
 	margin-bottom: 0px;
+	text-align: center;
+	opacity: .8;
+}
+
+label {
+	color: #ffffff;
 }
 
 .user {
@@ -48,13 +77,36 @@ nav {
 }
 
 h3 {
+	color: #ffffff;
 	text-align: center;
+}
+
+#newContact {
+	color: #ffffff;
+}
+
+#newContact:hover {
+	text-decoration: none;
+}
+
+#addContact {
+	background-color: #a5a3a3;
+	color: #ffffff;
 }
 
 #contact-list {
 	margin-bottom: 5px !important;
 	font-size: 20px;
 	color: #ffffff;
+}
+
+i {
+	color: #ffffff;
+}
+
+.input-group-addon {
+	background-color: #a5a3a3;
+	border-style: none;
 }
 
 .network-tab {
@@ -81,8 +133,28 @@ a {
 	background-color: #e35858;
 }
 
-.active {
-	background-color: blue;
+#edit {
+	background-color: #a5a3a3;
+	color: #ffffff;
+	border-color: #a5a3a3;
+}
+
+#addNetwork {
+	background-color: #a5a3a3;
+	color: #ffffff;
+}
+
+.nav-tabs>li>a {
+	background-color: #a5a3a3;
+	color: #ffffff;
+}
+
+.nav-tabs>li>a:hover {
+	background-color: #a5a3a3;
+}
+
+.nav-tabs>li>a.active {
+	background-color: #01579b;
 }
 
 .ion-android-remove-circle {
@@ -91,4 +163,8 @@ a {
 
 button {
 	outline: none !important;
+}
+
+input:focus {
+	outline: none;
 }

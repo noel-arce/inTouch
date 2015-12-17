@@ -30,6 +30,7 @@ angular.module('bonzai')
           $auth.setToken(response);
           $scope.isAuthenticated();
           $scope.user = {};
+          $location.path('/networks');
         })
         .catch(function(response) {
           console.log(response)
@@ -42,6 +43,7 @@ angular.module('bonzai')
           $auth.setToken(response.data.token);
           $scope.isAuthenticated();
           $scope.user = {};
+          $location.path('/networks');
         })
         .catch(function(response) {
           console.log(response)
@@ -53,7 +55,7 @@ angular.module('bonzai')
         .then(function() {
           $auth.removeToken();
           $scope.currentUser = null;
-          $location.path('/')
+          $location.path('/');
         });
     };
   }]);

@@ -3,14 +3,14 @@
   <form class="input-group" ng-submit="createNetwork(network)">
     <input type="text" class="form-control" placeholder="Name" ng-model="network.title" />
     <span class="input-group-btn">
-      <button type="submit" class="btn btn-default"><i class="ion-plus-circled"></i></button>
+      <button id="addNetwork" type="submit" class="btn btn-default"><i class="ion-plus-circled"></i></button>
     </span>
   </form>
   <br>
 
   <ul id="network-list" class="nav nav-tabs nav-stacked">
     <li ng-repeat="network in user.networks">
-      <a class="network-tab" ng-click="setCurrentNetwork(network)">{{ network.title }}<i ng-click="deleteNetwork(network)" class="ion-android-remove-circle pull-right"></i></a>
+      <a class="network-tab" ng-class="(network == currentNetwork) ? 'active' : ''" ng-click="setCurrentNetwork(network)">{{ network.title }}<i ng-click="deleteNetwork(network)" class="ion-android-remove-circle pull-right"></i></a>
     </li>
   </ul>
 </div>
@@ -18,11 +18,11 @@
 <div class="col-sm-9">
   <!-- New Contact Form -->
   <div>
-    <button type="button" class="btn btn-link center-block" ng-show="currentNetwork" ng-click="newContact = !newContact">{{newContactText}}</button>
+    <button id="newContact" type="button" class="btn btn-link center-block" ng-show="currentNetwork" ng-click="newContact = !newContact">{{newContactText}}</button>
     <form id="contactForm" ng-show="newContact" ng-submit="createContact(contact)">
       <input class="form-control" placeholder="name" ng-model="contact.name" autofocus/>
       <input class="form-control" type="text" placeholder="minutes" ng-model="contact.days"/>
-      <button type="submit" class='form-control'>Save</button>
+      <button id="addContact" type="submit" class='form-control'>Add</button>
     </form>
   </div>
   <hr>
@@ -49,7 +49,7 @@
         <span class="input-group-addon" ng-click="editing = false"><i class="ion-close-circled"></i></span>
         <input id="editName" type="text" class="form-control" ng-model="contact.name" placeholder="{{contact.name}}" autofocus>
         <span class="input-group-btn">
-          <button class="btn btn-default" type="submit" ng-click="editing = false">save</button>
+          <button id="edit" class="btn btn-default" type="submit" ng-click="editing = false">save</button>
         </span>
       </form>
     </li>
