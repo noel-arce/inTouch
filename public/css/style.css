@@ -20,18 +20,20 @@ body {
 	padding-left: 0px;
 }
 
-#tagline {
-	margin-left: 85px;
-}
+/*#tagline {
+	margin-left: 80px;
+}*/
 
 h1 {
 	color: #ffffff;
 	font-size: 150px;
+	text-align: center;
 }
 
 p {
 	color: #ffffff;
 	font-size: 50px;
+	text-align: center;
 }
 
 .navbar-right {
