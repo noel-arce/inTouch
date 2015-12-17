@@ -1,0 +1,64 @@
+<div class="col-sm-3">
+  <h3>Networks</h3>
+  <form class="input-group" ng-submit="createNetwork(network)">
+    <input type="text" class="form-control" placeholder="Name" ng-model="network.title" />
+    <span class="input-group-btn">
+      <button type="submit" class="btn btn-default"><i class="ion-plus-circled"></i></button>
+    </span>
+  </form>
+  <br>
+
+  <ul id="network-list" class="nav nav-tabs nav-stacked">
+    <li ng-repeat="network in user.networks">
+      <a class="network-tab" ng-click="setCurrentNetwork(network)">{{ network.title }}<i ng-click="deleteNetwork(network)" class="ion-android-remove-circle pull-right"></i></a>
+    </li>
+  </ul>
+</div>
+
+<div class="col-sm-9">
+  <!-- New Contact Form -->
+  <div>
+    <button type="button" class="btn btn-link center-block" ng-show="currentNetwork" ng-click="newContact = !newContact">{{newContactText}}</button>
+    <form id="contactForm" ng-show="newContact" ng-submit="createContact(contact)">
+      <input class="form-control" placeholder="name" ng-model="contact.name" autofocus/>
+      <input class="form-control" type="text" placeholder="minutes" ng-model="contact.days"/>
+      <button type="submit" class='form-control'>Save</button>
+    </form>
+  </div>
+  <hr>
+  <!-- TEXT WHEN BLANK -->
+  <div class="text-center" ng-show="!(user.networks).length">
+    <h2>You currently have no networks.</h2>
+  </div>
+
+  <h3>{{ currentNetwork.title }}</h3>
+  <ul class='list-group'>
+    <li id="contact-list" class="list-group-item" ng-class="{time_out: !contact.time_left, time_left: contact.time_left}" ng-repeat="contact in currentNetwork.contacts | orderBy : 'deadline'"> 
+      <span ng-hide="editing"><strong>{{contact.name}}</strong> | </span>
+      <timer end-time="contact.deadline" ng-hide="editing" finish-callback="turnRed(contact)">{{minutes}}:{{seconds}}</timer>  <!-- {{days}}:{{hours}}: -->
+      <a class='pull-right' ng-hide="editing" ng-click="deleteContact(contact)">
+        <i class='ion-trash-a'></i>
+      </a>
+      <a class='pull-right' ng-hide="editing" ng-click="editing = true">
+        <i class='ion-edit'></i>
+      </a>
+      <a class='pull-right' ng-hide="editing" ng-click="resetTimer(contact)">
+        <i class='ion-refresh'></i>
+      </a>
+      <form class="input-group" ng-show="editing" ng-hide="!editing" ng-submit="editContact(contact)">
+        <span class="input-group-addon" ng-click="editing = false"><i class="ion-close-circled"></i></span>
+        <input id="editName" type="text" class="form-control" ng-model="contact.name" placeholder="{{contact.name}}" autofocus>
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="submit" ng-click="editing = false">save</button>
+        </span>
+      </form>
+    </li>
+  </ul>
+  <br>
+  <!-- <button ng-click="isEditingNetwork = !isEditingNetwork" ng-show="currentNetwork">{{isEditingNetworkText}}</button>
+  <form ng-show="isEditingNetwork" ng-submit = "editNetwork()">
+    <input type="text" ng-model="network.title" placeholder="{{network.title}}" autofocus>
+    <button type="submit">Save</button>
+    <button ng-click="deleteNetwork(network)">Delete</button>
+  </form> -->
+</div>

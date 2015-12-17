@@ -10,3 +10,6 @@ exports.templates = function (req, res) {
   var name = req.params.name;
   res.render('templates/' + name);
 };
+
+exports.contactRouter =  require('./contacts.js');
+exports.networkRouter = require('./networks.js');

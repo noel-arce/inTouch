@@ -19,10 +19,6 @@
   display: inline-block;
 }​
 
-a {
-    cursor: pointer;
-}
-
 .navbar {
   margin:0;
 }
@@ -30,4 +26,69 @@ a {
 .dropdown-form {
   padding: 17px;
   width: 300px;
+}
+
+nav {
+	margin-bottom: 0px;
+}
+
+.user {
+	margin-left: 0px;
+	text-align: center;
+}
+
+#network-list {
+	color: black;
+	text-align: center;
+	border-bottom: none;
+}
+
+.network-name {
+	border-style: solid;
+}
+
+h3 {
+	text-align: center;
+}
+
+#contact-list {
+	margin-bottom: 5px !important;
+	font-size: 20px;
+	color: #ffffff;
+}
+
+.network-tab {
+	text-align: left;
+	margin-left: 0px;
+	margin-bottom: 5px;
+}
+
+a {
+	color: white;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.ion {
+	color: black;
+}
+
+.time_left {
+	background-color: #4dbf6b;
+}
+
+.time_out {
+	background-color: #e35858;
+}
+
+.active {
+	background-color: blue;
+}
+
+.ion-android-remove-circle {
+	margin-left: 30px;
+}
+
+button {
+	outline: none !important;
 }

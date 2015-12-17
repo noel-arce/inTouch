@@ -10,8 +10,16 @@ var User = require('../models/user.js')
 module.exports = function(app) {
 
   app.get('/api/me', auth.ensureAuthenticated, function(req, res) {
-    User.findById(req.userId, function(err, user) {
-      res.send(user);
+    User.findById(req.userId).populate("networks").exec(function(err, user) {
+      var options = {
+        path: 'networks.contacts',
+        model: 'Contact'
+      };
+
+      if (err) return res.json(500);
+      User.populate(user, options, function (err, user) {
+        res.send(user);
+      });
     });
   });
 
