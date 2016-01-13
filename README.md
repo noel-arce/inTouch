@@ -1,25 +1,20 @@
-# MEAN Auth Seed
+# Description
+BONZI keeps you in touch with those you care about.  Users create networks with their various contacts and each contact is assigned a timer set to a specified number of days.  When the timer is up, it's time to reconnect.
 
-## What's inside
+# Technologies
+1. MondoDB
+2. ExpressJS
+3. AngularJS
+4. NodeJS
+5. Bootstrap
+6. Animate.css
 
-1. Express, Mongo, Node, Angular 1.4
-2. JWT token authentication (from Satellizer)
+# User Stories
+1. John wants to keep in touch with his friends. He installs BONZI and creates a network called friends. In that network he creates a list of several of his friends. When he creates each friend, he decides how often he wants to reach out to them.
+2. Noel wants see how well he is keeping in touch with his family overseas. He logs into BONZI and see several contacts have timed out and turned red. He now knows to contact his relatives.
 
-## How to Get Started
+# Wireframes
+![Wireframe](public/img/wireframe.JPG)
 
-1. fork and clone this repo
-2. run `npm install`
-3. run `nodemon`
-
-## Customize Auth
-
-1. Go to your `.env` file and change your TOKEN_SECRET variable. [dotenv docs](https://www.npmjs.com/package/dotenv)
-2. add `.env` to your `.gitignore` file.
-
-## Adding Custom Authorizors (Facebook, Google, etc)
-
-1. Read the [Satellizer](https://github.com/sahat/satellizer) docs on how to add these authorizors.
-
-
-
-# mean-auth-html
+# Heroku
+bonzi.herokuapp.com
