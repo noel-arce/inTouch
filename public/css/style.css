@@ -1,114 +1,25 @@
-body {
-/*	background: url("/img/4028-bonsai-1920x1080-digital-art-wallpaper.jpg") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;*/
-  background-color: gray;
+/***** NAVBAR *****/
+
+.navbar {
+  position: relative;
 }
 
-/*h1 {
-	color: #ffffff;
-	font-size: 150px;
-	text-align: center;
-}*/
-
-/*p {
-	color: #ffffff;
-	font-size: 50px;
-	text-align: center;
-}*/
-
-/*.navbar-right {
-    margin-right: 0;
-}*/
-
-/*.btn-toolbar {
-  display: inline-block;
-}​*/
-
-/*.navbar {
-  margin: 0px;
-}*/
-
-/*.dropdown-form {
-  padding: 17px;
-  width: 300px;
-}*/
-
-/*nav {
-	margin-bottom: 0px;
-	text-align: center;
-	opacity: .8;
-}*/
-
-/*label {
-	color: #ffffff;
-}*/
-
-/*.user {
-	margin-left: 0px;
-	text-align: center;
-}*/
-
-/*#network-list {
-	color: black;
-	text-align: center;
-	border-bottom: none;
+.navbar-brand {
+	position: absolute;
+	left: 50%;
+	margin-left: -50px !important;  /* 50% of your logo width */
+	display: block;
 }
 
-.network-name {
-	border-style: solid;
-}*/
-
-/*h3 {
-	color: #ffffff;
-	text-align: center;
-}*/
-
-/*#newContact {
-	color: #ffffff;
-}*/
-
-/*#newContact:hover {
-	text-decoration: none;
-}*/
-
-/*#addContact {
-	background-color: #a5a3a3;
-	color: #ffffff;
-}*/
-
-/*#contact-list {
-	margin-bottom: 5px !important;
-	font-size: 20px;
-	color: #ffffff;
-}*/
-
-/*i {
-	color: #ffffff;
-}*/
-
-/*.input-group-addon {
-	background-color: #a5a3a3;
-	border-style: none;
-}*/
-
-/*.network-tab {
-	text-align: left;
-	margin-left: 0px;
-	margin-bottom: 5px;
-}*/
-
-/*a {
+.glyphicon, .glyphicon:hover {
 	color: white;
-	margin-left: 10px;
-	cursor: pointer;
-}*/
+}
 
-/*.ion {
-	color: black;
-}*/
+ul.nav.navbar-nav.navbar-right {
+	text-align: center;
+}
+
+/***** CONTACT LIST *****/
 
 .time_left {
 	color: #4dbf6b;
@@ -117,63 +28,3 @@ body {
 .time_out {
 	color: #e35858;
 }
-
-/*#edit {
-	background-color: #a5a3a3;
-	color: #ffffff;
-	border-color: #a5a3a3;
-}*/
-
-/*#addNetwork {
-	background-color: #a5a3a3;
-	color: #ffffff;
-}*/
-
-/*.nav-tabs>li>a {
-	background-color: #a5a3a3;
-	color: #ffffff;
-}*/
-
-/*.nav-tabs>li>a:hover {
-	background-color: #a5a3a3;
-}*/
-
-/*.nav-tabs>li>a.active {
-	background-color: #01579b;
-}*/
-
-/*.ion-android-remove-circle {
-	margin-left: 30px;
-}*/
-
-/*button {
-	outline: none !important;
-}*/
-
-/*input:focus {
-	outline: none;
-}*/
-
-/*h2 {
-	color: #ffffff;
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

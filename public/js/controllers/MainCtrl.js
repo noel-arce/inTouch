@@ -5,6 +5,14 @@
 angular.module('bonzai')
   .controller('MainCtrl', ['$scope', '$rootScope', '$location', '$auth', '$http',  function ($scope, $rootScope, $location, $auth, $http) {
 
+    $scope.showForm = function() {
+      $scope.form = true;
+    };
+
+    $scope.hideForm = function() {
+      $scope.form = false;
+    };
+
     // LOGIN/REGISTER
     $scope.user = {};
 

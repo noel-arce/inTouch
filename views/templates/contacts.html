@@ -1,27 +1,37 @@
 <div class="col-sm-8 col-sm-offset-2">
-	<form ng-submit="createContact(contact)">
+	<form ng-show="form" ng-submit="createContact(contact)">
 	  <input type="text" class="form-control" placeholder="name" ng-model="contact.name"/>
 	  <input type="text" class="form-control" placeholder="days" ng-model="contact.days"/>
 	  <button type="submit" class="form-control">Add</button>
 	</form>
+
+	<button ng-hide="form" ng-show="!editing" ng-click="editing = true">edit</button>
+	<button ng-show="editing" ng-click="editing = false">done</button>
+
 	<hr>
+</div> <!-- col-sm-8 -->
+
+<div class="col-sm-8 col-sm-offset-2">
+	<div>
+		<ul class="list-group">
+			<li type="none" ng-class="{ time_out:!contact.time_left, time_left:contact.time_left }" ng-repeat="contact in contacts | orderBy : 'deadline'">
+				<div ng-hide="" ng-show="!editForm">{{ contact.name }} | <timer end-time="contact.deadline" finish-callback="turnRed(contact)">{{days}}:{{hours}}:{{minutes}}:{{seconds}}</timer></div>
+				<button ng-show="!editForm" ng-hide="!editing" ng-click="editForm = true">edit</button>
+				<button ng-show="!editing" ng-hide="" ng-click="resetTimer(contact)">reset</button>
+				<button ng-show="!editForm" ng-hide="!editing" ng-click="deleteContact(contact)">delete</button>
+				<!-- EDIT FORM -->
+				<form class="input-group" ng-show="editForm" ng-hide="!editForm" ng-submit="editContact(contact)">
+					<input type="text" class="form-control" placeholder="{{ contact.name }}" ng-model="contact.name">
+					<input type="text" class="form-control" placeholder="{{ contact.days }}" ng-model="contact.days"/>
+					<a class="btn-default" ng-click="editForm = false">cancel</a>
+					<button type="submit" ng-click="editForm = false">save</button>
+				</form>
+				<hr>
+			</li>
+		</ul>
+	</div>
+	<!-- DISPLAY TEXT ONLY IF NO CONTACTS -->
 	<div class="text-center" ng-show="!contacts.length">
 		<h2>you currently have no contacts</h2>
 	</div>
-	<ul class="list-group">
-		<li type="none" ng-class="{ time_out:!contact.time_left, time_left:contact.time_left }" ng-repeat="contact in contacts | orderBy : 'deadline'">
-			<div ng-hide="editing">{{ contact.name }} | <timer end-time="contact.deadline" finish-callback="turnRed(contact)">{{days}}:{{hours}}:{{minutes}}:{{seconds}}</timer></div> <!-- {{days}}:{{hours}}: -->
-			<button ng-hide="editing" ng-click="editing = true">edit</button>
-			<button ng-hide="editing" ng-click="resetTimer(contact)">reset</button>
-			<button ng-hide="editing" ng-click="deleteContact(contact)">delete</button>
-			<!-- EDIT FORM -->
-			<form class="input-group" ng-show="editing" ng-hide="!editing" ng-submit="editContact(contact)">
-				<input type="text" class="form-control" placeholder="{{ contact.name }}" ng-model="contact.name">
-				<input type="text" class="form-control" placeholder="days" ng-model="contact.days"/>
-				<a class="btn-default" ng-click="editing = false">cancel</a>
-				<button type="submit" ng-click="editing = false">save</button>
-			</form>
-			<hr>
-		</li>
-	</ul>
 </div>

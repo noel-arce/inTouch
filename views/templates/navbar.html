@@ -1,6 +1,14 @@
-<nav class="navbar navbar-default animated slideInDown">
+<nav class="navbar navbar-default">
   <div class="navbar-header">
-    <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand">inTouch</a>
+    <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" class="navbar-toggle collapsed">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a href="/contacts" class="navbar-brand">inTouch</a>
+    <a ng-show="!form" ng-hide="!currentUser" ng-click="showForm()" class="btn navbar-btn glyphicon glyphicon-plus"></a>
+    <a ng-show="form" ng-click="hideForm()" class="btn navbar-btn glyphicon glyphicon-remove"></a>
   </div>
   <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
     <ul class="nav navbar-nav navbar-right">
@@ -10,6 +18,10 @@
         </a>
         <div class="dropdown-menu dropdown-form animated fadeIn" style="padding:17px;">
           <form>
+            <div class="form-group">
+              <label for="">Username</label>
+              <input type="text" ng-model="user.username" class="form-control"/>
+            </div>
             <div class="form-group">
               <label for="">Email</label>
               <input type="text" ng-model="user.email" class="form-control"/>
@@ -44,8 +56,8 @@
           </form>
         </div>
       </li>
-      <li ng-show="currentUser"><a>{{ currentUser.email }}</a></li>
-      <li ng-show="currentUser"><a href="/networks">Profile</a></li>
+      <!-- <li ng-show="currentUser"><a>{{ currentUser.email }}</a></li> -->
+      <li ng-show="currentUser"><a href="/profile">Profile | {{ currentUser.email }}</a></li>
       <li ng-show="currentUser"><a ng-click="logout()">Logout</a></li>
       <!-- <li ng-show="currentUser" class="dropdown">
         <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><span class="status">Me</span><span class="caret"></span></a>
@@ -57,10 +69,9 @@
         </ul>
       </li> -->
     </ul>
-    <!-- <div class="nav navbar-nav navbar-right"><a data-toggle="modal" data-target="#login-modal" ng-hide="currentUser" class="navbar-btn btn btn-info">Get Started</a></div> -->
   </div>
 </nav>
-<div id="login-modal" tabindex="-1" role="dialog" class="modal fade">
+<!-- <div id="login-modal" tabindex="-1" role="dialog" class="modal fade">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-body">
@@ -86,4 +97,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->

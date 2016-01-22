@@ -13,7 +13,7 @@ var UserSchema = new Schema({
   , updated_at    : { type: Date }
   , email         : { type: String, required: true, unique: true, trim: true, set: toLower }
   , password      : { type: String, required: true, select: false }
-  // , username      : { type: String, trim: true }
+  // , username      : { type: String, required: true, trim: true }
   // , networks      : [ {type: Schema.Types.ObjectId, ref: "Network"} ]
 });
 

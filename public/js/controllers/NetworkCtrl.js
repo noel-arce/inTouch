@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('bonzai')
-	.controller('NetworkCtrl', ['$scope', '$location', '$http', 'Auth', function ($scope, $location, $http, Auth){
+	.controller('NetworkCtrl', ['$scope', '$location', '$http', 'Auth', function ($scope, $location, $http, Auth) {
 
 		//GET ALL CONTACTS
 		$http.get('/api/contacts') 
@@ -40,7 +40,7 @@ angular.module('bonzai')
 		    .success(function(response){
 		      console.log("contact info from server: ", response);
 		      $scope.resetTimer(contact);
-		      $scope.editing = false;
+		      $scope.editForm = false;
 		    }).error(function (error){
 		      console.log(error);
 		    });
