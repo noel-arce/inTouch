@@ -12,8 +12,8 @@ angular.module('bonzai', ['basic-auth.services',
         templateUrl: 'templates/splash'
       }),
 
-      $routeProvider.when("/networks", {
-        templateUrl: "templates/network-index",
+      $routeProvider.when("/contacts", {
+        templateUrl: "templates/contacts",
         controller: "NetworkCtrl"
       }),
 

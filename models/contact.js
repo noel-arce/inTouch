@@ -1,9 +1,6 @@
-/*
- * CONTACT MODEL
- */
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
-
+    User = require('./user');
 
 // Contact Schema
 var ContactSchema = new Schema({
@@ -12,7 +9,8 @@ var ContactSchema = new Schema({
     name: { type: String, required: true, trim: true },
     days: { type: Number, required: true },
     deadline: { type: Number, required: true },
-    time_left: {type: Boolean, required: true, default: true}
+    time_left: {type: Boolean, required: true, default: true},
+    creator: {type: Schema.Types.ObjectId, ref: "User"}
 });
 
 // MIDDLEWARE

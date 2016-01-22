@@ -11,5 +11,5 @@ exports.templates = function (req, res) {
   res.render('templates/' + name);
 };
 
-exports.contactRouter =  require('./contacts.js');
-exports.networkRouter = require('./networks.js');
+exports.contactRouter = require('./contacts.js');
+// exports.networkRouter = require('./networks.js');

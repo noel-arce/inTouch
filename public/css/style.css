@@ -1,74 +1,57 @@
-/*.animate-slide {
-  animation: 0.5s slideInLeft;
-}
-
-.animate-slide.ng-hide {
-  animation: 0.5s slideOutLeft;
-}
-*/
-
 body {
-	background: url("/img/4028-bonsai-1920x1080-digital-art-wallpaper.jpg") no-repeat center center fixed; 
+/*	background: url("/img/4028-bonsai-1920x1080-digital-art-wallpaper.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover;*/
+  background-color: gray;
 }
 
-#splashContainer {
-	margin-left: 0px;
-	padding-left: 0px;
-}
-
-/*#tagline {
-	margin-left: 80px;
-}*/
-
-h1 {
+/*h1 {
 	color: #ffffff;
 	font-size: 150px;
 	text-align: center;
-}
+}*/
 
-p {
+/*p {
 	color: #ffffff;
 	font-size: 50px;
 	text-align: center;
-}
+}*/
 
-.navbar-right {
+/*.navbar-right {
     margin-right: 0;
-}
+}*/
 
-.btn-toolbar {
+/*.btn-toolbar {
   display: inline-block;
-}​
+}​*/
 
-.navbar {
+/*.navbar {
   margin: 0px;
-}
+}*/
 
-.dropdown-form {
+/*.dropdown-form {
   padding: 17px;
   width: 300px;
-}
+}*/
 
-nav {
+/*nav {
 	margin-bottom: 0px;
 	text-align: center;
 	opacity: .8;
-}
+}*/
 
-label {
+/*label {
 	color: #ffffff;
-}
+}*/
 
-.user {
+/*.user {
 	margin-left: 0px;
 	text-align: center;
-}
+}*/
 
-#network-list {
+/*#network-list {
 	color: black;
 	text-align: center;
 	border-bottom: none;
@@ -76,101 +59,121 @@ label {
 
 .network-name {
 	border-style: solid;
-}
+}*/
 
-h3 {
+/*h3 {
 	color: #ffffff;
 	text-align: center;
-}
+}*/
 
-#newContact {
+/*#newContact {
 	color: #ffffff;
-}
+}*/
 
-#newContact:hover {
+/*#newContact:hover {
 	text-decoration: none;
-}
+}*/
 
-#addContact {
+/*#addContact {
 	background-color: #a5a3a3;
 	color: #ffffff;
-}
+}*/
 
-#contact-list {
+/*#contact-list {
 	margin-bottom: 5px !important;
 	font-size: 20px;
 	color: #ffffff;
-}
+}*/
 
-i {
+/*i {
 	color: #ffffff;
-}
+}*/
 
-.input-group-addon {
+/*.input-group-addon {
 	background-color: #a5a3a3;
 	border-style: none;
-}
+}*/
 
-.network-tab {
+/*.network-tab {
 	text-align: left;
 	margin-left: 0px;
 	margin-bottom: 5px;
-}
+}*/
 
-a {
+/*a {
 	color: white;
 	margin-left: 10px;
 	cursor: pointer;
-}
+}*/
 
-.ion {
+/*.ion {
 	color: black;
-}
+}*/
 
 .time_left {
-	background-color: #4dbf6b;
+	color: #4dbf6b;
 }
 
 .time_out {
-	background-color: #e35858;
+	color: #e35858;
 }
 
-#edit {
+/*#edit {
 	background-color: #a5a3a3;
 	color: #ffffff;
 	border-color: #a5a3a3;
-}
+}*/
 
-#addNetwork {
+/*#addNetwork {
 	background-color: #a5a3a3;
 	color: #ffffff;
-}
+}*/
 
-.nav-tabs>li>a {
+/*.nav-tabs>li>a {
 	background-color: #a5a3a3;
 	color: #ffffff;
-}
+}*/
 
-.nav-tabs>li>a:hover {
+/*.nav-tabs>li>a:hover {
 	background-color: #a5a3a3;
-}
+}*/
 
-.nav-tabs>li>a.active {
+/*.nav-tabs>li>a.active {
 	background-color: #01579b;
-}
+}*/
 
-.ion-android-remove-circle {
+/*.ion-android-remove-circle {
 	margin-left: 30px;
-}
+}*/
 
-button {
+/*button {
 	outline: none !important;
-}
+}*/
 
-input:focus {
+/*input:focus {
 	outline: none;
-}
+}*/
 
-h2 {
+/*h2 {
 	color: #ffffff;
-}
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
