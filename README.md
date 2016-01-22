@@ -1,5 +1,5 @@
 # Description
-BONZI keeps you in touch with those you care about.  Users create networks with their various contacts and each contact is assigned a timer set to a specified number of days.  When the timer is up, it's time to reconnect.
+
 
 # Technologies
 1. MondoDB
@@ -17,4 +17,3 @@ BONZI keeps you in touch with those you care about.  Users create networks with 
 ![Wireframe](public/img/wireframe.JPG)
 
 # Heroku
-bonzi.herokuapp.com

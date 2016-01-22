@@ -2,29 +2,29 @@ var express = require('express');
 var contactRouter = express.Router();
 var Contact = require('../models/contact.js');
 var User = require('../models/user.js');
+var auth = require('./auth');
 // var Network = require('../models/network.js');
 
 contactRouter.route('/')  // translates to '/api/contacts/'
   
   // GET ALL USER CONTACTS
-  .get(function (req, res){
-  console.log("this is the request from client for contacts: ", req);
-      Contact.find().sort('-created_at').exec(function(err, contacts) {
-      if (err) { return res.status(404).send(err); }
-      res.send(contacts); 
-    });    
-  })
-
   // .get(function (req, res){
-  //   console.log("this is the request from client for contacts: ", req);
-  //     Contact.find().sort('-created_at').exec(function (err, contacts) {
+  // // console.log("this is the request from client for contacts: ", req);
+  //   Contact.find().sort('-created_at').exec(function(err, contacts) {
   //     if (err) { return res.status(404).send(err); }
-  //     // console.log("this users contacts are: ", contacts[0].creator);
-  //     for (var i = 0; i < contacts.length; i++) {
-  //       if (contacts[i].creator === currentUser) { res.send(contacts); }
-  //     }
+  //     res.send(contacts); 
   //   });    
   // })
+
+  .get(auth.ensureAuthenticated, function (req, res){
+    // console.log("this is the request from client for contacts: ", req);
+      // Contact.find().sort('-created_at').exec(function (err, contacts) {
+      Contact.find({ creator:req.userId }).exec(function (err, contacts) {
+      if (err) { return res.status(404).send(err); }
+      // console.log("this users contacts are: ", contacts);
+      res.send(contacts);
+    });    
+  })
 
   // CREATE CONTACT
   .post(function (req, res) {  
