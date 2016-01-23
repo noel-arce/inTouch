@@ -23,8 +23,8 @@
 				<form class="input-group" ng-show="editForm" ng-hide="!editForm" ng-submit="editContact(contact)">
 					<input type="text" class="form-control" placeholder="{{ contact.name }}" ng-model="contact.name">
 					<input type="text" class="form-control" placeholder="{{ contact.days }}" ng-model="contact.days"/>
-					<a class="btn-default" ng-click="editForm = false">cancel</a>
-					<a type="submit" ng-click="editForm = false">save</a>
+					<a class="btn-xs btn-danger" role="button" ng-click="editForm = false"><i class="ion-close-circled"></i></a>
+					<button class="pull-right" type="submit" ng-click="editForm = false">save</button>
 				</form>
 				<hr>
 			</li>

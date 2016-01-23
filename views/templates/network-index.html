@@ -15,9 +15,9 @@
   </ul>
 </div> -->
 
-<div class="col-sm-9">
+<!-- <div class="col-sm-9"> -->
   <!-- New Contact Form -->
-  <div>
+  <!-- <div>
     <button id="newContact" type="button" class="btn btn-link center-block animated fadeIn" ng-show="currentNetwork" ng-click="newContact = !newContact">{{newContactText}}</button>
     <form id="contactForm" class="animated fadeIn" ng-show="newContact" ng-submit="createContact(contact)">
       <input class="form-control" placeholder="name" ng-model="contact.name" autofocus/>
@@ -25,9 +25,9 @@
       <button id="addContact" type="submit" class='form-control'>Add</button>
     </form>
   </div>
-  <hr class="animated fadeIn">
+  <hr class="animated fadeIn"> -->
   <!-- TEXT WHEN BLANK -->
-  <div class="text-center" ng-show="!(user.networks).length">
+  <!-- <div class="text-center" ng-show="!(user.networks).length">
     <h2>You currently have no networks.</h2>
   </div>
 
@@ -35,7 +35,7 @@
   <ul class='list-group'>
     <li id="contact-list" class="list-group-item animated flipInX" ng-class="{time_out: !contact.time_left, time_left: contact.time_left}" ng-repeat="contact in currentNetwork.contacts | orderBy : 'deadline'"> 
       <span ng-hide="editing"><strong>{{contact.name}}</strong> | </span>
-      <timer end-time="contact.deadline" ng-hide="editing" finish-callback="turnRed(contact)">{{minutes}}:{{seconds}}</timer>  <!-- {{days}}:{{hours}}: -->
+      <timer end-time="contact.deadline" ng-hide="editing" finish-callback="turnRed(contact)">{{minutes}}:{{seconds}}</timer>
       <a class='pull-right' ng-hide="editing" ng-click="deleteContact(contact)">
         <i class='ion-trash-a'></i>
       </a>
@@ -54,11 +54,11 @@
       </form>
     </li>
   </ul>
-  <br>
+  <br> -->
   <!-- <button ng-click="isEditingNetwork = !isEditingNetwork" ng-show="currentNetwork">{{isEditingNetworkText}}</button>
   <form ng-show="isEditingNetwork" ng-submit = "editNetwork()">
     <input type="text" ng-model="network.title" placeholder="{{network.title}}" autofocus>
     <button type="submit">Save</button>
     <button ng-click="deleteNetwork(network)">Delete</button>
   </form> -->
-</div>
+<!-- </div> -->
