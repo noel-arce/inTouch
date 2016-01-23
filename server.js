@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 mongoose.connect(
   process.env.MONGOLAB_URI ||
   process.env.MONGOHQ_URL ||
-  'mongodb://localhost/keepintouch' // plug in the db name you've been using
+  'mongodb://localhost/intouch' // plug in the db name you've been using
 );
 
 // ********* serve public folder as static assets on the root route
