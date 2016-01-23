@@ -1,7 +1,13 @@
+body {
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 20px;
+}
+
 /***** NAVBAR *****/
 
 .navbar {
   position: relative;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 .navbar-brand {
@@ -9,6 +15,7 @@
 	left: 50%;
 	margin-left: -50px !important;
 	display: block;
+  font-size: 25px;
 }
 
 .glyphicon, .glyphicon:hover {
@@ -21,6 +28,33 @@ ul.nav.navbar-nav.navbar-right {
 
 /***** CONTACT LIST *****/
 
+hr {
+	color: black;
+}
+
+#editInit {
+	margin-left: 20px;
+	font-size: 15px;
+}
+
+#editDone {
+	margin-left: 20px;
+	font-size: 15px;
+}
+
+.badge.pull-right.ng-binding {
+	font-size: 15px;
+	background-color: white;
+	color: gray;
+	margin-top: 8px;
+	margin-right: 20px;
+	padding: 0px;
+}
+
+#contactName {
+	margin-left: 20px;
+}
+
 .time_left {
 	color: #4dbf6b;
 }
@@ -29,13 +63,14 @@ ul.nav.navbar-nav.navbar-right {
 	color: #e35858;
 }
 
-.horizontal {
-	width: 100%;
+.ion-refresh {
+	margin-right: 20px;
 }
 
-.inline {
-	display: inline-block;
+.ng-binding.ng-scope {
+	margin-right: 20px;
 }
+
 
 
 
