@@ -1,6 +1,6 @@
 body {
 	font-family: 'Titillium Web', sans-serif;
-	font-size: 20px;
+	font-size: 25px;
 }
 
 /***** NAVBAR *****/
@@ -8,22 +8,49 @@ body {
 .navbar {
   position: relative;
   font-family: 'Titillium Web', sans-serif;
+  border-radius: 0px;
 }
 
-.navbar-brand {
+.glyphicon, .glyphicon:hover {
+	color: #337ab7;
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-brand:hover {
 	position: absolute;
 	left: 50%;
 	margin-left: -50px !important;
 	display: block;
   font-size: 25px;
+  color: black;
 }
 
-.glyphicon, .glyphicon:hover {
-	color: gray;
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #337ab7;
+}
+
+.navbar-toggle.collapsed,
+.navbar-default .navbar-toggle:active, 
+.navbar-default .navbar-toggle:hover, 
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:focus {
+	background-color: #f8f8f8;
+	border: none;
+	margin-top: 9px;
+	margin-bottom: 7px;
+}
+
+#profile {
+	color: #337ab7;
+}
+
+#logout {
+	color: #337ab7;
+	cursor: pointer;
 }
 
 ul.nav.navbar-nav.navbar-right {
 	text-align: center;
+	font-size: 15px;
 }
 
 /***** CONTACT LIST *****/
@@ -32,45 +59,66 @@ hr {
 	color: black;
 }
 
-#editInit {
+#editInit, #editInit:hover {
 	margin-left: 20px;
 	font-size: 15px;
+	color: black;
+	cursor: pointer;
+	text-decoration: none;
 }
 
-#editDone {
+#editDone, #editDone:hover {
 	margin-left: 20px;
 	font-size: 15px;
+	color: black;
+	cursor: pointer;
+	text-decoration: none;
 }
 
 .badge.pull-right.ng-binding {
 	font-size: 15px;
 	background-color: white;
 	color: gray;
-	margin-top: 8px;
+	margin-top: 13px;
 	margin-right: 20px;
 	padding: 0px;
+	color: black;	
 }
 
 #contactName {
 	margin-left: 20px;
+	color: black;
 }
 
 .time_left {
-	color: #4dbf6b;
+	color: black;
 }
 
 .time_out {
 	color: #e35858;
 }
 
-.ion-refresh {
-	margin-right: 20px;
-}
-
 .ng-binding.ng-scope {
 	margin-right: 20px;
 }
 
+.ion-refresh, .ion-refresh:hover {
+	margin-right: 20px;
+	cursor: pointer;
+	color: black;
+}
+
+.ion-compose, .ion-compose:hover {
+	margin-right: 20px;
+	cursor: pointer;
+	color: black;
+}
+
+.ion-trash-a, .ion-trash-a:hover {
+	margin-right: 40px;
+	cursor: pointer;
+	color: #e35858;
+}
 
 
 

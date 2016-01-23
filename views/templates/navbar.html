@@ -57,8 +57,8 @@
         </div>
       </li>
       <!-- <li ng-show="currentUser"><a>{{ currentUser.email }}</a></li> -->
-      <li ng-show="currentUser"><a href="/profile">Profile | {{ currentUser.email }}</a></li>
-      <li ng-show="currentUser"><a ng-click="logout()">Logout</a></li>
+      <li ng-show="currentUser"><a id="profile" href="/profile">{{ currentUser.email }}</a></li>
+      <li ng-show="currentUser"><a id="logout" ng-click="logout()">Logout</a></li>
       <!-- <li ng-show="currentUser" class="dropdown">
         <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><span class="status">Me</span><span class="caret"></span></a>
         <ul class="dropdown-menu">

@@ -16,16 +16,19 @@
 	<div>
 		<ul class="list-group">
 			<li type="none" ng-class="{ time_out:!contact.time_left, time_left:contact.time_left }" ng-repeat="contact in contacts | orderBy : 'deadline'">
-				<span id="contactName" ng-show="!editForm">{{ contact.name }} <timer id="countdown" class="pull-right" ng-show="!editing" end-time="contact.deadline" finish-callback="turnRed(contact)">{{days}}:{{hours}}:{{minutes}}:{{seconds}} <a ng-show="!editing" ng-hide="" ng-click="resetTimer(contact)"><i class="ion-refresh"></i></a></timer></span>
+				<span id="contactName" ng-show="!editForm">{{ contact.name }}</span> <span><timer id="countdown" class="pull-right" ng-show="!editing" end-time="contact.deadline" finish-callback="turnRed(contact)">{{days}}:{{hours}}:{{minutes}}:{{seconds}} <a ng-show="!editing" ng-hide="" ng-click="resetTimer(contact)"><i class="ion-refresh"></i></a></timer></span>
 				<a ng-show="!editForm" ng-hide="!editing" ng-click="editForm = true"><i class="ion-compose pull-right"></i></a>
 				<a ng-show="!editForm" ng-hide="!editing" ng-click="deleteContact(contact)"><i class="ion-trash-a pull-right"></i></a>
-
-				<form class="input-group" ng-show="editForm" ng-hide="!editForm" ng-submit="editContact(contact)">
-					<input type="text" class="form-control" placeholder="{{ contact.name }}" ng-model="contact.name">
-					<input type="text" class="form-control" placeholder="{{ contact.days }}" ng-model="contact.days"/>
-					<a class="btn-xs btn-danger" role="button" ng-click="editForm = false"><i class="ion-close-circled"></i></a>
-					<button class="pull-right" type="submit" ng-click="editForm = false">save</button>
-				</form>
+				<div class="row">
+					<div class="col-sm-8 col-sm-offset-2">
+						<form class="input-group" ng-show="editForm" ng-hide="!editForm" ng-submit="editContact(contact)">
+							<input type="text" class="form-control" placeholder="{{ contact.name }}" ng-model="contact.name">
+							<input type="text" class="form-control" placeholder="{{ contact.days }}" ng-model="contact.days"/>
+							<a class="btn-xs btn-danger" role="button" ng-click="editForm = false"><i class="ion-close-circled"></i></a>
+							<button class="pull-right" type="submit" ng-click="editForm = false">save</button>
+						</form>
+					</div> <!-- row -->
+				</div>
 				<hr>
 			</li>
 		</ul>
