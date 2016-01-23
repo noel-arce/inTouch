@@ -7,31 +7,42 @@
 
 	<button ng-hide="form" ng-show="!editing" ng-click="editing = true">edit</button>
 	<button ng-show="editing" ng-click="editing = false">done</button>
+	<span ng-hide="form" class="badge pull-right">Contacts: {{ contacts.length }}</span>
 
 	<hr>
-</div> <!-- col-sm-8 -->
+</div> 
 
 <div class="col-sm-8 col-sm-offset-2">
 	<div>
 		<ul class="list-group">
 			<li type="none" ng-class="{ time_out:!contact.time_left, time_left:contact.time_left }" ng-repeat="contact in contacts | orderBy : 'deadline'">
-				<div ng-hide="" ng-show="!editForm">{{ contact.name }} | <timer end-time="contact.deadline" finish-callback="turnRed(contact)">{{days}}:{{hours}}:{{minutes}}:{{seconds}}</timer></div>
-				<button ng-show="!editForm" ng-hide="!editing" ng-click="editForm = true">edit</button>
-				<button ng-show="!editing" ng-hide="" ng-click="resetTimer(contact)">reset</button>
-				<button ng-show="!editForm" ng-hide="!editing" ng-click="deleteContact(contact)">delete</button>
-				<!-- EDIT FORM -->
+				<span ng-show="!editForm">{{ contact.name }} <timer class="pull-right" ng-show="!editing" end-time="contact.deadline" finish-callback="turnRed(contact)">{{days}}:{{hours}}:{{minutes}}:{{seconds}} | <a ng-show="!editing" ng-hide="" ng-click="resetTimer(contact)"><i class="ion-refresh"></i></a></timer></span>
+				<a ng-show="!editForm" ng-hide="!editing" ng-click="editForm = true"><i class="ion-compose pull-right"></i></a>
+				<a ng-show="!editForm" ng-hide="!editing" ng-click="deleteContact(contact)"><i class="ion-trash-a pull-right"></i></a>
+
 				<form class="input-group" ng-show="editForm" ng-hide="!editForm" ng-submit="editContact(contact)">
 					<input type="text" class="form-control" placeholder="{{ contact.name }}" ng-model="contact.name">
 					<input type="text" class="form-control" placeholder="{{ contact.days }}" ng-model="contact.days"/>
 					<a class="btn-default" ng-click="editForm = false">cancel</a>
-					<button type="submit" ng-click="editForm = false">save</button>
+					<a type="submit" ng-click="editForm = false">save</a>
 				</form>
 				<hr>
 			</li>
 		</ul>
 	</div>
-	<!-- DISPLAY TEXT ONLY IF NO CONTACTS -->
+
 	<div class="text-center" ng-show="!contacts.length">
 		<h2>you currently have no contacts</h2>
 	</div>
 </div>
+
+
+
+
+
+
+
+
+
+
+

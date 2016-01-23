@@ -7,7 +7,7 @@
 .navbar-brand {
 	position: absolute;
 	left: 50%;
-	margin-left: -50px !important;  /* 50% of your logo width */
+	margin-left: -50px !important;
 	display: block;
 }
 
@@ -28,3 +28,17 @@ ul.nav.navbar-nav.navbar-right {
 .time_out {
 	color: #e35858;
 }
+
+.horizontal {
+	width: 100%;
+}
+
+.inline {
+	display: inline-block;
+}
+
+
+
+
+
+
