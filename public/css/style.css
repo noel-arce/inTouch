@@ -11,8 +11,12 @@ body {
   border-radius: 0px;
 }
 
-.glyphicon, .glyphicon:hover {
+.glyphicon, .glyphicon:hover, .glyphicon:active, .glyphicon:focus, .glyphicon:visited {
 	color: #337ab7;
+}
+
+.glyphicon-home {
+	margin-left: 5px;
 }
 
 .navbar-default .navbar-brand, .navbar-default .navbar-brand:hover {
@@ -31,7 +35,7 @@ body {
 .navbar-toggle.collapsed,
 .navbar-default .navbar-toggle:active, 
 .navbar-default .navbar-toggle:hover, 
-.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:visited,
 .navbar-default .navbar-toggle:focus {
 	background-color: #f8f8f8;
 	border: none;
@@ -55,9 +59,9 @@ ul.nav.navbar-nav.navbar-right {
 
 /***** CONTACT LIST *****/
 
-hr {
+/*hr {
 	color: black;
-}
+}*/
 
 #editInit, #editInit:hover {
 	margin-left: 20px;
