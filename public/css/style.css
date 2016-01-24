@@ -77,13 +77,13 @@ ul.nav.navbar-nav.navbar-right {
 	text-decoration: none;
 }
 
-#editDone, #editDone:hover {
+/*#editDone, #editDone:hover {
 	margin-left: 20px;
 	font-size: 15px;
 	color: black;
 	cursor: pointer;
 	text-decoration: none;
-}
+}*/
 
 .badge.pull-right.ng-binding {
 	font-size: 15px;
@@ -158,12 +158,58 @@ a#cancelEdit.btn-xs:visited {
 	padding: 0px;
 }
 
+/***** ANIMATIONS *****/
+
+.fadeIn.ng-hide-add {
+    -webkit-animation: fadeOut 0s;
+    display: block !important;
+}
+
+.fadeIn.ng-hide-remove {
+    -webkit-animation: fadeIn 1s;
+    display: block !important;
+}
+
+.ng-hide {
+	display: none !important;
+}
+
+
+
+
+
 /* ANIMATION TESTING */
 
-
-
-
-
+/*.container {
+  text-align: center;
+}
+input[type='checkbox'] {
+  -ms-transform: scale(2);
+  -moz-transform: scale(2);
+  -webkit-transform: scale(2);
+  -o-transform: scale(2);
+  margin: 20px;
+}
+.box {
+  margin: 20px auto;
+  background: #5FCF80;
+  width: 150px;
+  height: 150px;
+}
+.circle {
+  -webkit-transform: rotate(360deg);
+  background: #9351A6;
+  border-radius: 50%;
+  margin: 20px auto;
+  width: 150px;
+  height: 150px;
+}
+.rotate {
+  -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}*/
 
 
 

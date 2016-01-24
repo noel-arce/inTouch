@@ -6,9 +6,8 @@
 	  <button type="submit" class="contactInput form-control">Add</button>
 	</form>
 	<!-- LIST INFO / EDIT FEATURE -->
-	<a id="editInit" ng-hide="form" ng-show="!editing" ng-click="editing = true">EDIT</a>
-	<a id="editDone" ng-show="editing" ng-click="editing = false">DONE</a>
-	<span ng-hide="form" class="badge pull-right">CONTACTS - {{ contacts.length }}</span>
+	<a id="editInit" ng-click="edit = !edit"><strong>{{ editText }}</strong></a>
+	<span class="badge pull-right">CONTACTS - {{ contacts.length }}</span>
 
 	<hr>
 </div>
@@ -17,10 +16,18 @@
 <div class="col-sm-8 col-sm-offset-2">
 	<div>
 		<ul class="list-group">
-			<li type="none" class="" ng-class="{ time_out:!contact.time_left, time_left:contact.time_left }" ng-repeat="contact in contacts | orderBy : 'deadline'">
-				<span id="contactName" ng-show="!editForm">{{ contact.name }}</span> <span><timer id="countdown" class="pull-right" ng-show="!editing" end-time="contact.deadline" finish-callback="turnRed(contact)">{{days}}:{{hours}}:{{minutes}}:{{seconds}} <a ng-show="!editing" ng-hide="" ng-click="resetTimer(contact)"><i class="ion-refresh"></i></a></timer></span>
-				<a ng-show="!editForm" ng-hide="!editing" ng-click="editForm = true"><i class="ion-compose pull-right"></i></a>
-				<a ng-show="!editForm" ng-hide="!editing" ng-click="deleteContact(contact)"><i class="ion-trash-a pull-right"></i></a>
+			<li type="none" ng-class="{ time_out:!contact.time_left, time_left:contact.time_left }" ng-repeat="contact in contacts | orderBy : 'deadline'">
+				<span id="contactName">{{ contact.name }}</span>
+				<span>
+					<timer class="fadeIn pull-right" ng-show="!edit" end-time="contact.deadline" finish-callback="turnRed(contact)">
+						{{days}}:{{hours}}:{{minutes}}:{{seconds}}
+						<a ng-click="resetTimer(contact)">
+							<i class="ion-refresh"></i>
+						</a>
+					</timer>
+				</span>
+				<a ng-show="edit" ng-class="{ 'change':edit, 'noChange':!edit }" ng-click="editForm = !editForm"><i class="ion-compose pull-right"></i></a>
+				<a ng-show="edit" ng-class="{ 'change':edit, 'noChange':!edit }" ng-click="deleteContact(contact)"><i class="ion-trash-a pull-right"></i></a>
 				<div class="row">
 					<div class="col-xs-6 col-xs-offset-3">
 						<form class="input-group" ng-show="editForm" ng-hide="!editForm" ng-submit="editContact(contact)">
@@ -40,6 +47,12 @@
 		<h2>you currently have no contacts</h2>
 	</div>
 </div>
+
+<!-- TEST ANIMATION -->
+<!-- <div class="container">
+  <input type="checkbox" ng-model="boxClass" />
+  <div class="box rotate" ng-class="{'box': boxClass, 'circle': !boxClass} "></div>
+</div> -->
 
 
 

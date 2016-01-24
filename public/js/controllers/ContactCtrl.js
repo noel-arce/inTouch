@@ -1,7 +1,13 @@
 'use strict';
 
 angular.module('inTouch')
-	.controller('ContactCtrl', ['$scope', '$location', '$http', 'Auth', '$animate', function ($scope, $location, $http, Auth, $animate) {
+	.controller('ContactCtrl', ['$scope', '$location', '$http', 'Auth', function ($scope, $location, $http, Auth) {
+
+		$scope.edit = false;
+
+		$scope.$watch('edit', function(){
+		  $scope.editText = $scope.edit ? 'DONE' : 'EDIT';
+		});
 
 		//GET ALL CONTACTS
 		$http.get('/api/contacts') 
@@ -84,11 +90,6 @@ angular.module('inTouch')
 		      console.log(error);
 		    });
 		};
-
-		//Halftime Color Change
-		// $scope.turnYellow = function (contact) {
-		//   console.log('sup');
-		// };
 
 }]);
 		//NETWORK

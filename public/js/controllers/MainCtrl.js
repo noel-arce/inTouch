@@ -3,7 +3,7 @@
 /* MAIN Controller */
 
 angular.module('inTouch')
-  .controller('MainCtrl', ['$scope', '$rootScope', '$location', '$auth', '$http', '$animate', function ($scope, $rootScope, $location, $auth, $http, $animate) {
+  .controller('MainCtrl', ['$scope', '$rootScope', '$location', '$auth', '$http', function ($scope, $rootScope, $location, $auth, $http) {
 
     $scope.log = false;
 
