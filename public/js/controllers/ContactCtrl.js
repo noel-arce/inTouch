@@ -1,13 +1,13 @@
 'use strict';
 
-angular.module('bonzai')
-	.controller('NetworkCtrl', ['$scope', '$location', '$http', 'Auth', function ($scope, $location, $http, Auth) {
+angular.module('inTouch')
+	.controller('ContactCtrl', ['$scope', '$location', '$http', 'Auth', '$animate', function ($scope, $location, $http, Auth, $animate) {
 
 		//GET ALL CONTACTS
 		$http.get('/api/contacts') 
 		  .success(function(response) {
 		    $scope.contacts = response;
-		    console.log($scope.contacts);
+		    // console.log($scope.contacts);
 		  })
 		  .error(function(response) {
 		    console.log(response);

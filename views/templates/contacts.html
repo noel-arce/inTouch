@@ -1,34 +1,36 @@
 <div class="col-sm-8 col-sm-offset-2">
-	<form ng-show="form" ng-submit="createContact(contact)">
-	  <input type="text" class="form-control" placeholder="name" ng-model="contact.name"/>
-	  <input type="text" class="form-control" placeholder="days" ng-model="contact.days"/>
-	  <button type="submit" class="form-control">Add</button>
+	<!-- NEW CONTACT FORM -->
+	<form id="contactForm" ng-show="form" ng-submit="createContact(contact)">
+	  <input type="text" class="contactInput form-control" placeholder="name" ng-model="contact.name"/>
+	  <input type="text" class="contactInput form-control" placeholder="days" ng-model="contact.days"/>
+	  <button type="submit" class="contactInput form-control">Add</button>
 	</form>
-
+	<!-- LIST INFO / EDIT FEATURE -->
 	<a id="editInit" ng-hide="form" ng-show="!editing" ng-click="editing = true">EDIT</a>
 	<a id="editDone" ng-show="editing" ng-click="editing = false">DONE</a>
 	<span ng-hide="form" class="badge pull-right">CONTACTS - {{ contacts.length }}</span>
 
 	<hr>
-</div> 
+</div>
 
+<!-- LIST OF CONTACTS -->
 <div class="col-sm-8 col-sm-offset-2">
 	<div>
 		<ul class="list-group">
-			<li type="none" ng-class="{ time_out:!contact.time_left, time_left:contact.time_left }" ng-repeat="contact in contacts | orderBy : 'deadline'">
+			<li type="none" class="" ng-class="{ time_out:!contact.time_left, time_left:contact.time_left }" ng-repeat="contact in contacts | orderBy : 'deadline'">
 				<span id="contactName" ng-show="!editForm">{{ contact.name }}</span> <span><timer id="countdown" class="pull-right" ng-show="!editing" end-time="contact.deadline" finish-callback="turnRed(contact)">{{days}}:{{hours}}:{{minutes}}:{{seconds}} <a ng-show="!editing" ng-hide="" ng-click="resetTimer(contact)"><i class="ion-refresh"></i></a></timer></span>
 				<a ng-show="!editForm" ng-hide="!editing" ng-click="editForm = true"><i class="ion-compose pull-right"></i></a>
 				<a ng-show="!editForm" ng-hide="!editing" ng-click="deleteContact(contact)"><i class="ion-trash-a pull-right"></i></a>
 				<div class="row">
-					<div class="col-sm-8 col-sm-offset-2">
+					<div class="col-xs-6 col-xs-offset-3">
 						<form class="input-group" ng-show="editForm" ng-hide="!editForm" ng-submit="editContact(contact)">
-							<input type="text" class="form-control" placeholder="{{ contact.name }}" ng-model="contact.name">
-							<input type="text" class="form-control" placeholder="{{ contact.days }}" ng-model="contact.days"/>
-							<a class="btn-xs btn-danger" role="button" ng-click="editForm = false"><i class="ion-close-circled"></i></a>
-							<button class="pull-right" type="submit" ng-click="editForm = false">save</button>
+							<input type="text" id="editName" class="form-control" placeholder="{{ contact.name }}" ng-model="contact.name">
+							<input type="text" id="editDays" class="form-control" placeholder="{{ contact.days }}" ng-model="contact.days"/>
+							<a id="cancelEdit" class="btn-xs" role="button" ng-click="editForm = false">cancel</a>
+							<button id="saveEdit" class="btn-xs pull-right" type="submit" ng-click="editForm = false">save</button>
 						</form>
-					</div> <!-- row -->
-				</div>
+					</div>
+				</div> <!-- row -->
 				<hr>
 			</li>
 		</ul>

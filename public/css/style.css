@@ -28,19 +28,23 @@ body {
   color: black;
 }
 
-.navbar-default .navbar-toggle .icon-bar {
-	background-color: #337ab7;
+.ion-android-person {
+	font-size: 20px;
+	color: #337ab7;
 }
 
-.navbar-toggle.collapsed,
+.navbar-toggle,
 .navbar-default .navbar-toggle:active, 
 .navbar-default .navbar-toggle:hover, 
 .navbar-default .navbar-toggle:visited,
 .navbar-default .navbar-toggle:focus {
 	background-color: #f8f8f8;
 	border: none;
-	margin-top: 9px;
-	margin-bottom: 7px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-right: 5px;
+	padding-top: 7px;
+	padding-right: 12px;
 }
 
 #profile {
@@ -57,11 +61,13 @@ ul.nav.navbar-nav.navbar-right {
 	font-size: 15px;
 }
 
-/***** CONTACT LIST *****/
+/***** NEW CONTACT FORM *****/
 
-/*hr {
-	color: black;
-}*/
+.contactInput {
+	border-radius: 0px;
+}
+
+/***** CONTACT LIST *****/
 
 #editInit, #editInit:hover {
 	margin-left: 20px;
@@ -95,7 +101,7 @@ ul.nav.navbar-nav.navbar-right {
 }
 
 .time_left {
-	color: black;
+	color: #4dbf6b;
 }
 
 .time_out {
@@ -123,6 +129,50 @@ ul.nav.navbar-nav.navbar-right {
 	cursor: pointer;
 	color: #e35858;
 }
+
+#editName {
+	border-radius: 0px;
+}
+
+#editDays {
+	border-radius: 0px;
+}
+
+#saveEdit {
+	font-size: 18px;
+	padding: 0px;
+	border: none;
+	background-color: white;
+	color: black;
+	padding-top: 6px;
+}
+
+a#cancelEdit.btn-xs,
+a#cancelEdit.btn-xs:hover,
+a#cancelEdit.btn-xs:active,
+a#cancelEdit.btn-xs:focus,
+a#cancelEdit.btn-xs:visited {
+	font-size: 18px;
+	text-decoration: none;
+	color: red;
+	padding: 0px;
+}
+
+/* ANIMATION TESTING */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

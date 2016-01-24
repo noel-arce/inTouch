@@ -1,11 +1,12 @@
 'use strict';
 
 // Declare app level module which depends on filters, and services
-angular.module('bonzai', ['basic-auth.services',
-                              'ngRoute',
-                              'ngResource',
-                              'satellizer',
-                              'timer'])
+angular.module('inTouch', ['basic-auth.services',
+                           'ngAnimate',
+                           'ngRoute',
+                           'ngResource',
+                           'satellizer',
+                           'timer'])
 
     .config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
       $routeProvider.when('/', {
@@ -14,7 +15,7 @@ angular.module('bonzai', ['basic-auth.services',
 
       $routeProvider.when("/contacts", {
         templateUrl: "templates/contacts",
-        controller: "NetworkCtrl"
+        controller: "ContactCtrl"
       }),
 
       $routeProvider.when('/profile', {

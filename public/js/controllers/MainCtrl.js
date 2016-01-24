@@ -2,8 +2,8 @@
 
 /* MAIN Controller */
 
-angular.module('bonzai')
-  .controller('MainCtrl', ['$scope', '$rootScope', '$location', '$auth', '$http',  function ($scope, $rootScope, $location, $auth, $http) {
+angular.module('inTouch')
+  .controller('MainCtrl', ['$scope', '$rootScope', '$location', '$auth', '$http', '$animate', function ($scope, $rootScope, $location, $auth, $http, $animate) {
 
     $scope.log = false;
 
@@ -30,7 +30,7 @@ angular.module('bonzai')
       $http.get('/api/me').then(function (data) {
         if (!!data.data) {
           $scope.currentUser = data.data;
-          console.log($scope.currentUser);
+          // console.log($scope.currentUser);
         } else {
           $auth.removeToken();
         }
@@ -45,14 +45,14 @@ angular.module('bonzai')
     $scope.signup = function() {
       $auth.signup($scope.user)
         .then(function(response) {
-          console.log(response)
+          console.log(response);
           $auth.setToken(response);
           $scope.isAuthenticated();
           $scope.user = {};
           $location.path('/contacts');
         })
         .catch(function(response) {
-          console.log(response)
+          console.log(response);
         });
     };
 
@@ -65,7 +65,7 @@ angular.module('bonzai')
           $location.path('/contacts');
         })
         .catch(function(response) {
-          console.log(response)
+          console.log(response);
         });
     };
 
@@ -78,3 +78,7 @@ angular.module('bonzai')
         });
     };
   }]);
+
+
+
+

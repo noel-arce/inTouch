@@ -24,7 +24,7 @@ module.exports = {
 	  
 	  req.userEmail = payload.email;
 	  req.userId = payload.sub;
-	  console.log("Logged user ID is: ", req.userId);
+	  // console.log("Logged user ID is: ", req.userId);
 	  next();
 	},
 
