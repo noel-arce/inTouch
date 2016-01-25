@@ -2,101 +2,16 @@
   <div class="navbar-header">
     <button ng-hide="!currentUser" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" class="navbar-toggle collapsed">
       <span class="sr-only">Toggle navigation</span>
-      <!-- <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span> -->
       <span class="ion-android-person"></span>
     </button>
     <a class="navbar-brand">inTouch</a>
     <a href="/contacts" ng-hide="!currentUser" class="btn navbar-btn glyphicon glyphicon-home"></a>
     <a class="btn navbar-btn glyphicon glyphicon-plus" ng-hide="!currentUser" ng-click="showHideForm()"></a>
-    <!-- <a class="btn navbar-btn glyphicon glyphicon-remove" ng-show="form" ng-click="hideForm()"></a> -->
   </div>
   <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
     <ul class="nav navbar-nav navbar-right">
-     <!--  <li ng-show="!currentUser" class="dropdown">
-        <a class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-          <strong>Sign Up</strong>
-        </a>
-        <div class="dropdown-menu dropdown-form animated fadeIn" style="padding:17px;"> -->
-          <!-- <form> -->
-            <!-- <div class="form-group">
-              <label for="">Username</label>
-              <input type="text" ng-model="user.username" class="form-control"/>
-            </div> -->
-            <!-- <div class="form-group">
-              <label for="">Email</label>
-              <input type="text" ng-model="user.email" class="form-control"/>
-            </div>
-            <div class="form-group">
-              <label for="">Password</label>
-              <input type="password" ng-model="user.password" class="form-control"/>
-            </div>
-            <div class="form-group">
-              <label for="">Confirm Password</label>
-              <input type="password" ng-model="user.confirm" class="form-control"/>
-            </div>
-            <button type="submit" ng-click="signup()" class="btn btn-info">Sign Up</button>
-          </form>
-        </div>
-      </li>
-      <li ng-show="!currentUser" class="dropdown">
-        <a class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-          Login
-        </a>
-        <div class="dropdown-menu dropdown-form animated fadeIn">
-          <form>
-            <div class="form-group">
-              <label for="">Email</label>
-              <input type="text" ng-model="user.email" class="form-control"/>
-            </div>
-            <div class="form-group">
-              <label for="">Password</label>
-              <input type="password" ng-model="user.password" class="form-control"/>
-            </div>
-            <button type="submit" ng-click="login()" class="btn btn-info">Log In</button>
-          </form>
-        </div>
-      </li> -->
-      <!-- <li ng-show="currentUser"><a>{{ currentUser.email }}</a></li> -->
       <li ng-show="currentUser"><a id="profile" href="/profile">{{ currentUser.email }}</a></li>
       <li ng-show="currentUser"><a id="logout" ng-click="logout()">Logout</a></li>
-      <!-- <li ng-show="currentUser" class="dropdown">
-        <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><span class="status">Me</span><span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="/profile">Profile</a></li>
-          <li><a href="/settings">Settings</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a ng-click="logout()">Logout</a></li>
-        </ul>
-      </li> -->
     </ul>
   </div>
 </nav>
-<!-- <div id="login-modal" tabindex="-1" role="dialog" class="modal fade">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <div class="modal-body">
-        <div ng-show="err" class="alert alert-danger">{{err}}</div>
-        <form>
-          <div class="form-group">
-            <label for="">Email</label>
-            <input type="text" ng-model="user.email" class="form-control"/>
-          </div>
-          <div class="form-group">
-            <label for="">Password</label>
-            <input type="password" ng-model="user.password" class="form-control"/>
-          </div>
-          <div ng-show="signupMode" class="form-group">
-            <label for="">Confirm Password</label>
-            <input type="password" ng-model="user.confirm" class="form-control"/>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer"><a ng-click="signupMode = true" ng-hide="signupMode" class="btn btn-link">Sign Up</a>
-        <button type="submit" ng-hide="signupMode" ng-click="login()" class="btn btn-info">Log In</button><a ng-click="signupMode = false" ng-show="signupMode" class="btn btn-link">Login</a>
-        <button type="submit" ng-cloak="" ng-show="signupMode" ng-click="signup()" class="btn btn-info">Sign Up</button>
-      </div>
-    </div>
-  </div>
-</div> -->

@@ -1,7 +1,6 @@
 var mongoose = require('mongoose'),
     bcrypt = require('bcryptjs'),
     Schema = mongoose.Schema;
-    // Network = require('./network');
 
 // GETTER
 function toLower (v) {
@@ -9,12 +8,11 @@ function toLower (v) {
 }
 
 var UserSchema = new Schema({
-    created_at    : { type: Date }
-  , updated_at    : { type: Date }
-  , email         : { type: String, required: true, unique: true, trim: true, set: toLower }
-  , password      : { type: String, required: true, select: false }
+    created_at    : { type: Date },
+    updated_at    : { type: Date },
+    email         : { type: String, required: true, unique: true, trim: true, set: toLower },
+    password      : { type: String, required: true, select: false }
   // , username      : { type: String, required: true, trim: true }
-  // , networks      : [ {type: Schema.Types.ObjectId, ref: "Network"} ]
 });
 
 UserSchema.virtual('fullname').get(function() {

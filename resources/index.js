@@ -1,7 +1,3 @@
-/*
- * INDEX RESOURCES
- */
-
 exports.index = function(req, res){
   res.render('index');
 };
@@ -12,4 +8,3 @@ exports.templates = function (req, res) {
 };
 
 exports.contactRouter = require('./contacts.js');
-// exports.networkRouter = require('./networks.js');

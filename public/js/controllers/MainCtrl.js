@@ -24,10 +24,6 @@ angular.module('inTouch')
       }
     };
 
-    // $scope.hideForm = function() {
-    //   $scope.form = false;
-    // };
-
     // LOGIN/REGISTER
     $scope.user = {};
 
@@ -35,7 +31,6 @@ angular.module('inTouch')
       $http.get('/api/me').then(function (data) {
         if (!!data.data) {
           $scope.currentUser = data.data;
-          // console.log($scope.currentUser);
         } else {
           $auth.removeToken();
         }
@@ -50,7 +45,6 @@ angular.module('inTouch')
     $scope.signup = function() {
       $auth.signup($scope.user)
         .then(function(response) {
-          console.log(response);
           $auth.setToken(response);
           $scope.isAuthenticated();
           $scope.user = {};
@@ -83,6 +77,7 @@ angular.module('inTouch')
         });
     };
   }]);
+
 
 
 

@@ -12,8 +12,8 @@ angular.module('basic-auth.services', [])
           _id: user.sub,
           username: user.username,
           email: user.email
-        }
+        };
         return currentUser;
       }
-    }
-  }])
+    };
+  }]);
