@@ -61,6 +61,17 @@ ul.nav.navbar-nav.navbar-right {
 	font-size: 15px;
 }
 
+/***** SPLASH PAGE *****/
+
+.well {
+	border-radius: 0px;
+	font-size: 15px;
+}
+
+.well input {
+	border-radius: 0px;
+}
+
 /***** NEW CONTACT FORM *****/
 
 .contactInput {
@@ -76,14 +87,6 @@ ul.nav.navbar-nav.navbar-right {
 	cursor: pointer;
 	text-decoration: none;
 }
-
-/*#editDone, #editDone:hover {
-	margin-left: 20px;
-	font-size: 15px;
-	color: black;
-	cursor: pointer;
-	text-decoration: none;
-}*/
 
 .badge.pull-right.ng-binding {
 	font-size: 15px;
@@ -158,70 +161,29 @@ a#cancelEdit.btn-xs:visited {
 	padding: 0px;
 }
 
-/***** ANIMATIONS *****/
-
-.fadeIn.ng-hide-add {
-    -webkit-animation: fadeOut 0s;
-    display: block !important;
-}
-
-.fadeIn.ng-hide-remove {
-    -webkit-animation: fadeIn 1s;
-    display: block !important;
-}
+/***** CSS ANIMATIONS *****/
 
 .ng-hide {
 	display: none !important;
 }
 
-
-
-
-
-/* ANIMATION TESTING */
-
-/*.container {
-  text-align: center;
+#contactForm.ng-hide-remove {
+	-webkit-animation: fadeIn 1s;
+  display: block !important;
 }
-input[type='checkbox'] {
-  -ms-transform: scale(2);
-  -moz-transform: scale(2);
-  -webkit-transform: scale(2);
-  -o-transform: scale(2);
-  margin: 20px;
+
+.countdown.ng-hide-remove {
+  -webkit-animation: fadeIn 0.5s;
+  display: block !important;
 }
-.box {
-  margin: 20px auto;
-  background: #5FCF80;
-  width: 150px;
-  height: 150px;
+
+.change.ng-hide-remove {
+  -webkit-animation: zoomIn 0.5s;
+  display: block !important;
 }
-.circle {
-  -webkit-transform: rotate(360deg);
-  background: #9351A6;
-  border-radius: 50%;
-  margin: 20px auto;
-  width: 150px;
-  height: 150px;
+
+.edit-input-group.ng-hide-remove {
+  -webkit-animation: fadeIn 0.5s;
+  display: block !important;
 }
-.rotate {
-  -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

@@ -19,8 +19,8 @@
 			    <label for="">Confirm Password</label>
 			    <input type="password" ng-model="user.confirm" class="form-control"/>
 			  </div>
-			  <button type="submit" ng-click="signup()" class="btn btn-info">Sign Up</button>
-			  <a ng-click="loginForm()">login</a>
+			  <button class="btn btn-primary" type="submit" ng-click="signup()">Sign Up</button>
+			  <a class="btn pull-right" ng-click="loginForm()">login</a>
 			</form>
 
 			<!-- LOGIN FORM -->
@@ -33,8 +33,8 @@
 			    <label for="">Password</label>
 			    <input type="password" ng-model="user.password" class="form-control"/>
 			  </div>
-			  <button type="submit" ng-click="login()" class="btn btn-info">Log In</button>
-			  <a ng-click="signupForm()">signup</a>
+			  <button class="btn btn-primary" type="submit" ng-click="login()">Log In</button>
+			  <a class="btn pull-right" ng-click="signupForm()">signup</a>
 			</form>
 		</div> <!-- well -->
 	</div> <!-- col-sm-4 -->

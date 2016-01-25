@@ -6,6 +6,7 @@ angular.module('inTouch')
   .controller('MainCtrl', ['$scope', '$rootScope', '$location', '$auth', '$http', function ($scope, $rootScope, $location, $auth, $http) {
 
     $scope.log = false;
+    $scope.form = false;
 
     $scope.loginForm = function () {
       $scope.log = true;
@@ -15,13 +16,17 @@ angular.module('inTouch')
       $scope.log = false;
     };
 
-    $scope.showForm = function() {
-      $scope.form = true;
+    $scope.showHideForm = function() {
+      if ($scope.form) {
+        $scope.form = false;
+      } else {
+        $scope.form = true;
+      }
     };
 
-    $scope.hideForm = function() {
-      $scope.form = false;
-    };
+    // $scope.hideForm = function() {
+    //   $scope.form = false;
+    // };
 
     // LOGIN/REGISTER
     $scope.user = {};

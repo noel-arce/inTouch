@@ -6,8 +6,8 @@
 	  <button type="submit" class="contactInput form-control">Add</button>
 	</form>
 	<!-- LIST INFO / EDIT FEATURE -->
-	<a id="editInit" ng-click="edit = !edit"><strong>{{ editText }}</strong></a>
-	<span class="badge pull-right">CONTACTS - {{ contacts.length }}</span>
+	<a id="editInit" ng-show="!form" ng-click="edit = !edit"><strong>{{ editText }}</strong></a>
+	<span class="badge pull-right"ng-show="!form" >CONTACTS - {{ contacts.length }}</span>
 
 	<hr>
 </div>
@@ -17,20 +17,20 @@
 	<div>
 		<ul class="list-group">
 			<li type="none" ng-class="{ time_out:!contact.time_left, time_left:contact.time_left }" ng-repeat="contact in contacts | orderBy : 'deadline'">
-				<span id="contactName">{{ contact.name }}</span>
+				<span id="contactName" ng-hide="editForm">{{ contact.name }}</span>
 				<span>
-					<timer class="fadeIn pull-right" ng-show="!edit" end-time="contact.deadline" finish-callback="turnRed(contact)">
+					<timer class="countdown pull-right" ng-show="!edit" end-time="contact.deadline" finish-callback="turnRed(contact)">
 						{{days}}:{{hours}}:{{minutes}}:{{seconds}}
 						<a ng-click="resetTimer(contact)">
 							<i class="ion-refresh"></i>
 						</a>
 					</timer>
 				</span>
-				<a ng-show="edit" ng-class="{ 'change':edit, 'noChange':!edit }" ng-click="editForm = !editForm"><i class="ion-compose pull-right"></i></a>
-				<a ng-show="edit" ng-class="{ 'change':edit, 'noChange':!edit }" ng-click="deleteContact(contact)"><i class="ion-trash-a pull-right"></i></a>
+				<a ng-hide="editForm" ng-click="editForm = !editForm"><i ng-show="edit" class="change ion-compose pull-right"></i></a>
+				<a ng-hide="editForm" ng-click="deleteContact(contact)"><i ng-show="edit" class="change ion-trash-a pull-right"></i></a>
 				<div class="row">
 					<div class="col-xs-6 col-xs-offset-3">
-						<form class="input-group" ng-show="editForm" ng-hide="!editForm" ng-submit="editContact(contact)">
+						<form class="edit-input-group" ng-show="editForm" ng-submit="editContact(contact)">
 							<input type="text" id="editName" class="form-control" placeholder="{{ contact.name }}" ng-model="contact.name">
 							<input type="text" id="editDays" class="form-control" placeholder="{{ contact.days }}" ng-model="contact.days"/>
 							<a id="cancelEdit" class="btn-xs" role="button" ng-click="editForm = false">cancel</a>
