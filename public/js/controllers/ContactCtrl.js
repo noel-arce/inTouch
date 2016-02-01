@@ -25,7 +25,7 @@ angular.module('inTouch')
 
 		// CREATE A New Contact   
 		$scope.createContact = function(contact) {
-		  var daysToMilli = $scope.contact.days*60*1000;
+		  var daysToMilli = $scope.contact.days*24*60*60*1000;
 		  var currentDate = Date.now();
 		  var deadline = daysToMilli + currentDate;
 		  $http.post('/api/contacts', { name: $scope.contact.name, days: $scope.contact.days, deadline: deadline, creator: $scope.currentUser._id })
