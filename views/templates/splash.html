@@ -1,37 +1,41 @@
+<!-- <div class="section">
+	<p><i id="tagline">Remember those who matter most</i></p>
+</div> -->
 <div class="container">
 	<div class="col-sm-4 col-sm-offset-4">
 		<div class="well">
 			<!-- SIGN UP FORM -->
-			<form ng-show="!log">
+			<form id="logForm" ng-show="!log">
 			  <!-- <div class="form-group">
 			    <label for="">Username</label>
 			    <input type="text" ng-model="user.username" class="form-control"/>
 			  </div> -->
 			  <div class="form-group">
-			    <label for="">Email</label>
-			    <input type="text" ng-model="user.email" class="form-control"/>
+			    <!-- <label for="">Email</label> -->
+			    <input type="text" ng-model="user.email" class="form-control" placeholder="email"/>
 			  </div>
 			  <div class="form-group">
-			    <label for="">Password</label>
-			    <input type="password" ng-model="user.password" class="form-control"/>
+			    <!-- <label for="">Password</label> -->
+			    <input type="password" ng-model="user.password" class="form-control" placeholder="password"/>
 			  </div>
 			  <div class="form-group">
-			    <label for="">Confirm Password</label>
-			    <input type="password" ng-model="user.confirm" class="form-control"/>
+			    <!-- <label for="">Confirm Password</label> -->
+			    <input type="password" ng-model="user.confirm" class="form-control" placeholder="confirm password"/>
 			  </div>
 			  <button class="btn btn-primary" type="submit" ng-click="signup()">Sign Up</button>
+				<!-- <span>Have an Account?</span> -->
 			  <a class="btn pull-right" ng-click="loginForm()">login</a>
 			</form>
 
 			<!-- LOGIN FORM -->
-			<form ng-show="log">
+			<form id="signForm" ng-show="log">
 			  <div class="form-group">
-			    <label for="">Email</label>
-			    <input type="text" ng-model="user.email" class="form-control"/>
+			    <!-- <label for="">Email</label> -->
+			    <input type="text" ng-model="user.email" class="form-control" placeholder="email"/>
 			  </div>
 			  <div class="form-group">
-			    <label for="">Password</label>
-			    <input type="password" ng-model="user.password" class="form-control"/>
+			    <!-- <label for="">Password</label> -->
+			    <input type="password" ng-model="user.password" class="form-control" placeholder="password"/>
 			  </div>
 			  <button class="btn btn-primary" type="submit" ng-click="login()">Log In</button>
 			  <a class="btn pull-right" ng-click="signupForm()">signup</a>
@@ -39,6 +43,7 @@
 		</div> <!-- well -->
 	</div> <!-- col-sm-4 -->
 </div> <!-- container -->
+
 
 
 

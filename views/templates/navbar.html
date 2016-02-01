@@ -6,11 +6,11 @@
     </button>
     <a class="navbar-brand">inTouch</a>
     <a href="/contacts" ng-hide="!currentUser" class="btn navbar-btn glyphicon glyphicon-home"></a>
-    <a class="btn navbar-btn glyphicon glyphicon-plus" ng-hide="!currentUser" ng-click="showHideForm()"></a>
+    <!-- <a class="btn navbar-btn glyphicon glyphicon-plus" ng-hide="!currentUser" ng-click="showHideForm()"></a> -->
   </div>
   <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
     <ul class="nav navbar-nav navbar-right">
-      <li ng-show="currentUser"><a id="profile" href="/profile">{{ currentUser.email }}</a></li>
+      <!-- <li ng-show="currentUser"><a id="profile" href="/profile">{{ currentUser.email }}</a></li> -->
       <li ng-show="currentUser"><a id="logout" ng-click="logout()">Logout</a></li>
     </ul>
   </div>

@@ -1,6 +1,7 @@
 body {
 	font-family: 'Titillium Web', sans-serif;
 	font-size: 25px;
+	background-color: #3a4058;
 }
 
 /***** NAVBAR *****/
@@ -9,10 +10,12 @@ body {
   position: relative;
   font-family: 'Titillium Web', sans-serif;
   border-radius: 0px;
+  margin-bottom: 10px;
+  opacity: 0.8;
 }
 
 .glyphicon, .glyphicon:hover, .glyphicon:active, .glyphicon:focus, .glyphicon:visited {
-	color: #337ab7;
+	color: #2a2e3e;
 }
 
 .glyphicon-home {
@@ -25,12 +28,12 @@ body {
 	margin-left: -50px !important;
 	display: block;
   font-size: 25px;
-  color: black;
+  color: #2a2e3e;
 }
 
 .ion-android-person {
 	font-size: 20px;
-	color: #337ab7;
+	color: #2a2e3e;
 }
 
 .navbar-toggle,
@@ -48,11 +51,11 @@ body {
 }
 
 #profile {
-	color: #337ab7;
+	color: #3a4058;
 }
 
 #logout {
-	color: #337ab7;
+	color: #3a4058;
 	cursor: pointer;
 }
 
@@ -63,13 +66,30 @@ ul.nav.navbar-nav.navbar-right {
 
 /***** SPLASH PAGE *****/
 
+.section {
+	text-align: center;
+	color: #f5f5f5;
+}
+
 .well {
 	border-radius: 0px;
 	font-size: 15px;
+	margin-top: 150px;
+	margin-bottom: 0px;
 }
 
 .well input {
 	border-radius: 0px;
+}
+
+.well button.btn.btn-primary {
+	border-radius: 0px;
+	background-color: #3a4058;
+	border-style: none; 
+}
+
+.form-group {
+	margin-bottom: 10px;
 }
 
 /***** NEW CONTACT FORM *****/
@@ -80,35 +100,38 @@ ul.nav.navbar-nav.navbar-right {
 
 /***** CONTACT LIST *****/
 
+#contactForm {
+	margin-bottom: 15px;
+}
+
 #editInit, #editInit:hover {
 	margin-left: 20px;
 	font-size: 15px;
-	color: black;
+	color: white;
 	cursor: pointer;
 	text-decoration: none;
 }
 
 .badge.pull-right.ng-binding {
 	font-size: 15px;
-	background-color: white;
-	color: gray;
+	background-color: #3a4058;
+	color: white;
 	margin-top: 13px;
 	margin-right: 20px;
 	padding: 0px;
-	color: black;	
 }
 
 #contactName {
 	margin-left: 20px;
-	color: black;
+	color: white;
 }
 
 .time_left {
-	color: #4dbf6b;
+	color: white;
 }
 
 .time_out {
-	color: #e35858;
+	color: #F43752;
 }
 
 .ng-binding.ng-scope {
@@ -118,19 +141,19 @@ ul.nav.navbar-nav.navbar-right {
 .ion-refresh, .ion-refresh:hover {
 	margin-right: 20px;
 	cursor: pointer;
-	color: black;
+	color: white;
 }
 
 .ion-compose, .ion-compose:hover {
 	margin-right: 20px;
 	cursor: pointer;
-	color: black;
+	color: white;
 }
 
 .ion-trash-a, .ion-trash-a:hover {
 	margin-right: 40px;
 	cursor: pointer;
-	color: #e35858;
+	color: #F43752;
 }
 
 #editName {
@@ -145,8 +168,8 @@ ul.nav.navbar-nav.navbar-right {
 	font-size: 18px;
 	padding: 0px;
 	border: none;
-	background-color: white;
-	color: black;
+	background-color: #3a4058;
+	color: white;
 	padding-top: 6px;
 }
 
@@ -157,7 +180,7 @@ a#cancelEdit.btn-xs:focus,
 a#cancelEdit.btn-xs:visited {
 	font-size: 18px;
 	text-decoration: none;
-	color: red;
+	color: #F43752;
 	padding: 0px;
 }
 
@@ -165,6 +188,16 @@ a#cancelEdit.btn-xs:visited {
 
 .ng-hide {
 	display: none !important;
+}
+
+#logForm.ng-hide-remove {
+	-webkit-animation: fadeIn 1s;
+  display: block !important;
+}
+
+#signForm.ng-hide-remove {
+	-webkit-animation: fadeIn 1s;
+  display: block !important;
 }
 
 #contactForm.ng-hide-remove {
@@ -186,4 +219,8 @@ a#cancelEdit.btn-xs:visited {
   -webkit-animation: fadeIn 0.5s;
   display: block !important;
 }
+
+
+
+
 

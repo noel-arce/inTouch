@@ -1,8 +1,8 @@
 <div class="col-sm-8 col-sm-offset-2">
 	<!-- NEW CONTACT FORM -->
-	<form id="contactForm" ng-show="form" ng-submit="createContact(contact)">
+	<form id="contactForm" ng-submit="createContact(contact)">
 	  <input type="text" class="contactInput form-control" placeholder="name" ng-model="contact.name"/>
-	  <input type="text" class="contactInput form-control" placeholder="days" ng-model="contact.days"/>
+	  <input type="text" class="contactInput form-control" placeholder="days   ( whole number or decimal )" ng-model="contact.days"/>
 	  <button type="submit" class="contactInput form-control">Add</button>
 	</form>
 	<!-- LIST INFO / EDIT FEATURE -->
@@ -27,7 +27,7 @@
 					</timer>
 				</span>
 				<a ng-hide="editForm" ng-click="editForm = !editForm"><i ng-show="edit" class="change ion-compose pull-right"></i></a>
-				<a ng-hide="editForm" ng-click="deleteContact(contact)"><i ng-show="edit" class="change ion-trash-a pull-right"></i></a>
+				<a ng-hide="editForm" ng-click="deleteContact(contact)"><i ng-show="edit" class="change ion-trash-a pull-right"></i></a> <!-- MODAL ng-click="deleteContact(contact)" -->
 				<div class="row">
 					<div class="col-xs-6 col-xs-offset-3">
 						<form class="edit-input-group" ng-show="editForm" ng-submit="editContact(contact)">
@@ -48,7 +48,7 @@
 	</div>
 </div>
 
-
+<!-- DELETE MODAL -->
 
 
 

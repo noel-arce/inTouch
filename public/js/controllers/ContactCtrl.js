@@ -11,11 +11,11 @@ angular.module('inTouch')
 
 		//GET ALL CONTACTS
 		$http.get('/api/contacts') 
-		  .success(function(response) {
+		  .success(function (response) {
 		    $scope.contacts = response;
 		    // console.log($scope.contacts);
 		  })
-		  .error(function(response) {
+		  .error(function (response) {
 		    console.log(response);
 		 });
 
@@ -40,7 +40,7 @@ angular.module('inTouch')
 		// EDIT A POST
 		$scope.editContact = function(contact) {
 		  $http.put('api/contacts/' + contact._id, contact)
-		    .success(function(response){
+		    .success(function (response){
 		      $scope.resetTimer(contact);
 		      $scope.editForm = false;
 		    }).error(function (error){
@@ -67,9 +67,9 @@ angular.module('inTouch')
 		  contact.deadline = deadline;
 		  contact.time_left = true;
 		  $http.put('api/contacts/' + contact._id, contact)
-		    .success(function(response){
+		    .success(function (response){
 		    	$scope.$broadcast('timer-start');
-		    }).error(function(error){
+		    }).error(function (error){
 		      console.log(error);
 		    });
 		};
@@ -78,8 +78,8 @@ angular.module('inTouch')
 		$scope.turnRed = function (contact) {
 		  contact.time_left = false;
 		  $http.put('api/contacts/' + contact._id, contact) 
-		    .success(function(response){
-		    }).error(function(error){
+		    .success(function (response){
+		    }).error(function (error){
 		      console.log(error);
 		    });
 		};
