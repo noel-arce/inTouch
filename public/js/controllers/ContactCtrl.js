@@ -62,7 +62,7 @@ angular.module('inTouch')
 
 		// RESET TIMER
 		$scope.resetTimer = function(contact) {
-		  var daysToMilli = contact.days*60*1000;
+		  var daysToMilli = contact.days*24*60*60*1000;
 		  var deadline = daysToMilli + Date.now();
 		  contact.deadline = deadline;
 		  contact.time_left = true;
