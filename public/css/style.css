@@ -1,7 +1,8 @@
 body {
 	font-family: 'Titillium Web', sans-serif;
 	font-size: 25px;
-	background-color: #3a4058;
+	/*background-color: #3a4058;*/
+	background-color: #444444;
 }
 
 /***** NAVBAR *****/
@@ -15,7 +16,7 @@ body {
 }
 
 .glyphicon, .glyphicon:hover, .glyphicon:active, .glyphicon:focus, .glyphicon:visited {
-	color: #2a2e3e;
+	color: #444444;
 }
 
 .glyphicon-home {
@@ -28,12 +29,12 @@ body {
 	margin-left: -50px !important;
 	display: block;
   font-size: 25px;
-  color: #2a2e3e;
+  color: #444444;
 }
 
 .ion-android-person {
 	font-size: 20px;
-	color: #2a2e3e;
+	color: #444444;
 }
 
 .navbar-toggle,
@@ -50,12 +51,12 @@ body {
 	padding-right: 12px;
 }
 
-#profile {
+/*#profile {
 	color: #3a4058;
-}
+}*/
 
 #logout {
-	color: #3a4058;
+	color: #444444;
 	cursor: pointer;
 }
 
@@ -65,11 +66,6 @@ ul.nav.navbar-nav.navbar-right {
 }
 
 /***** SPLASH PAGE *****/
-
-.section {
-	text-align: center;
-	color: #f5f5f5;
-}
 
 .well {
 	border-radius: 0px;
@@ -84,7 +80,7 @@ ul.nav.navbar-nav.navbar-right {
 
 .well button.btn.btn-primary {
 	border-radius: 0px;
-	background-color: #3a4058;
+	background-color: #444444;
 	border-style: none; 
 }
 
